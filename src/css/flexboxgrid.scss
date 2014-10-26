@@ -1,0 +1,108 @@
+// Grid variables
+$half-gutter-width: 0.5rem;
+$gutter-compensation: -0.5rem;
+$outer-margin: 2rem;
+
+.grid {
+  padding-right: $outer-margin;
+  padding-left: $outer-margin;
+}
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
+}
+.row.reverse {
+  flex-direction: row-reverse;
+  flex-wrap: row-reverse;
+}
+.col.reverse {
+  flex-direction: column-reverse;
+  flex-wrap: column-reverse;
+}
+
+@mixin new-device($current-device){
+  .col-#{$current-device},
+  .col-#{$current-device}-1,
+  .col-#{$current-device}-2,
+  .col-#{$current-device}-3,
+  .col-#{$current-device}-4,
+  .col-#{$current-device}-5,
+  .col-#{$current-device}-6,
+  .col-#{$current-device}-7,
+  .col-#{$current-device}-8,
+  .col-#{$current-device}-9,
+  .col-#{$current-device}-10,
+  .col-#{$current-device}-11,
+  .col-#{$current-device}-12,
+  .col-#{$current-device}-offset-1,
+  .col-#{$current-device}-offset-2,
+  .col-#{$current-device}-offset-3,
+  .col-#{$current-device}-offset-4,
+  .col-#{$current-device}-offset-5,
+  .col-#{$current-device}-offset-6,
+  .col-#{$current-device}-offset-7,
+  .col-#{$current-device}-offset-8,
+  .col-#{$current-device}-offset-9,
+  .col-#{$current-device}-offset-10,
+  .col-#{$current-device}-offset-11,
+  .col-#{$current-device}-offset-12 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+  }
+  .col-#{$current-device} {flex-grow: 1;flex-basis: 0;max-width: 100%;}
+  .col-#{$current-device}-1 {flex-basis: 8.333333333%;max-width: 8.333333333%;}
+  .col-#{$current-device}-2 {flex-basis: 16.666666667%;max-width: 16.666666667%;}
+  .col-#{$current-device}-3 {flex-basis: 25%;max-width: 25%;}
+  .col-#{$current-device}-4 {flex-basis: 33.333333333%;max-width: 33.333333333%;}
+  .col-#{$current-device}-5 {flex-basis: 41.666666667%;max-width: 41.666666667%;}
+  .col-#{$current-device}-6 {flex-basis: 50%;max-width: 50%;}
+  .col-#{$current-device}-7 {flex-basis: 58.333333333%;max-width: 58.333333333%;}
+  .col-#{$current-device}-8 {flex-basis: 66.666666667%;max-width: 66.666666667%;}
+  .col-#{$current-device}-9 {flex-basis: 75%;max-width: 75%;}
+  .col-#{$current-device}-10 {flex-basis: 83.333333333%;max-width: 83.333333333%;}
+  .col-#{$current-device}-11 {flex-basis: 91.666666667%;max-width: 91.666666667%;}
+  .col-#{$current-device}-12 {flex-basis: 100%;max-width: 100%;}
+  .col-#{$current-device}-offset-1 {margin-left: 8.333333333%;}
+  .col-#{$current-device}-offset-2 {margin-left: 16.666666667%;}
+  .col-#{$current-device}-offset-3 {margin-left: 25%;}
+  .col-#{$current-device}-offset-4 {margin-left: 33.333333333%;}
+  .col-#{$current-device}-offset-5 {margin-left: 41.666666667%;}
+  .col-#{$current-device}-offset-6 {margin-left: 50%;}
+  .col-#{$current-device}-offset-7 {margin-left: 58.333333333%;}
+  .col-#{$current-device}-offset-8 {margin-left: 66.666666667%;}
+  .col-#{$current-device}-offset-9 {margin-left: 75%;}
+  .col-#{$current-device}-offset-10 {margin-left: 83.333333333%;}
+  .col-#{$current-device}-offset-11 {margin-left: 91.666666667%;}
+  .start-#{$current-device} {justify-content: flex-start;text-align: start;}
+  .center-#{$current-device} {justify-content: center;text-align: center;}
+  .end-#{$current-device} {justify-content: flex-end;text-align: end;}
+  .top-#{$current-device} {align-items: flex-start;}
+  .middle-#{$current-device} {align-items: center;}
+  .bottom-#{$current-device} {align-items: flex-end;}
+  .around-#{$current-device} {justify-content: space-around;}
+  .between-#{$current-device} {justify-content: space-between;}
+  .first-#{$current-device} {order: -1;}
+  .last-#{$current-device} {order: 1;}
+}
+@include new-device(xs);
+
+@media only screen and (min-width: 48em) {
+  @include new-device(sm);
+}
+
+@media only screen and (min-width: 62em) {
+  @include new-device(md);
+}
+
+@media only screen and (min-width: 75em) {
+  @include new-device(lg);
+}
