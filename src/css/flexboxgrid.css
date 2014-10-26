@@ -18,6 +18,10 @@
   margin: 0 auto;
 }
 
+.pull-right {
+  align-self: flex-end;
+}
+
 .grid {
   padding-right: 2rem;
   padding-left: 2rem;
