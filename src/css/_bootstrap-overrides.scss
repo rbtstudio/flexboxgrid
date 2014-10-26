@@ -1,5 +1,10 @@
 // Bootstrap Overrides
 .container,
+.container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.container,
 .container-fluid,
 .row {
     &:before, &:after {display: none;}
