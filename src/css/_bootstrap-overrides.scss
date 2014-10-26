@@ -1,0 +1,15 @@
+// Bootstrap Overrides
+.container,
+.container-fluid,
+.row {
+    &:before, &:after {display: none;}
+}
+.row > * {width: 100%;}
+
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img,
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    margin: 0 auto;
+}

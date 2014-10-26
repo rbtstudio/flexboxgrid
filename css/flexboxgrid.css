@@ -1,3 +1,23 @@
+.container:before, .container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  display: none;
+}
+
+.row > * {
+  width: 100%;
+}
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  margin: 0 auto;
+}
+
 .grid {
   padding-right: 2rem;
   padding-left: 2rem;
@@ -1074,3 +1094,5 @@
             order: 1;
   }
 }
+
+/*# sourceMappingURL=flexboxgrid.css.map */
